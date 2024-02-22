@@ -147,3 +147,8 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.purple-filter {
+  filter: sepia(90%) saturate(150%) hue-rotate(220deg) brightness(70%)
+    contrast(105%) opacity(70%);
+}

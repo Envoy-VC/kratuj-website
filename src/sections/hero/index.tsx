@@ -4,14 +4,7 @@ import Image from 'next/image';
 import { Badge } from '~/components/ui/badge';
 import { CalendarCustom } from '~/components/ui/calendar-custom';
 import { AspectRatio } from '~/components/ui/aspect-ratio';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '~/components/ui/dialog';
+import { Dialog, DialogContent, DialogTrigger } from '~/components/ui/dialog';
 
 import { KratujCover } from '~/assets';
 
@@ -26,7 +19,7 @@ const Hero = () => {
   };
   return (
     <section
-      className='hero-gradient mx-auto h-screen max-w-screen-xl'
+      className='hero-gradient mx-auto h-[130dvh] max-w-screen-xl sm:h-screen'
       id='hero'
     >
       <div className='relative py-[8dvh]'>

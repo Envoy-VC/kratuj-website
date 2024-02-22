@@ -1,10 +1,11 @@
 import React from 'react';
-import { Hero } from '~/sections';
+import { Hero, Speakers } from '~/sections';
 
 const Home = () => {
   return (
     <div className='dark'>
       <Hero />
+      <Speakers />
     </div>
   );
 };
