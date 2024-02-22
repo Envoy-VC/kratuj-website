@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient-border {
+  background: rgb(2, 0, 20);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(2, 0, 20, 1) 0%,
+    rgba(2, 0, 20, 1) 20%,
+    rgba(27, 23, 41, 1) 30%,
+    rgba(27, 23, 41, 1) 70%,
+    rgba(2, 0, 20, 1) 80%,
+    rgba(2, 0, 20, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(2, 0, 20, 1) 0%,
+    rgba(2, 0, 20, 1) 20%,
+    rgba(27, 23, 41, 1) 30%,
+    rgba(27, 23, 41, 1) 70%,
+    rgba(2, 0, 20, 1) 80%,
+    rgba(2, 0, 20, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 20, 1) 0%,
+    rgba(2, 0, 20, 1) 20%,
+    rgba(27, 23, 41, 1) 30%,
+    rgba(27, 23, 41, 1) 70%,
+    rgba(2, 0, 20, 1) 80%,
+    rgba(2, 0, 20, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020014",endColorstr="#020014",GradientType=1);
+}
+
+.hero-gradient {
+  background: radial-gradient(
+    37.74% 81.78% at 50% 26.56%,
+    rgba(148, 101, 255, 0.08) 0%,
+    rgba(3, 0, 20, 0) 100%
+  );
+}

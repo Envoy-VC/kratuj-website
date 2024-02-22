@@ -1,8 +1,11 @@
-export default function HomePage() {
+import React from 'react';
+
+const Home = () => {
   return (
-    <div className='flex h-screen w-full flex-col items-center justify-center'>
-      <h1 className='font-dune text-5xl font-bold'>Home Page</h1>
-      <h1 className='text-5xl'>Home Page</h1>
+    <div className='hero-gradient h-screen'>
+      <div className='py-[8dvh]'>Home</div>
     </div>
   );
-}
+};
+
+export default Home;

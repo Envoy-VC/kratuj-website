@@ -14,6 +14,8 @@ export const metadata = {
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
 };
 
+import { Navbar } from '~/components';
+
 export default function RootLayout({
   children,
 }: {
@@ -21,8 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={cn('', GeistSans.className, dune.variable)}>
-        {children}
+      <body
+        className={cn(
+          'bg-background !dark text-white',
+          GeistSans.className,
+          dune.variable
+        )}
+      >
+        <Navbar />
+        <main>{children}</main>
       </body>
     </html>
   );
