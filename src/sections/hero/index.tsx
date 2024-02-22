@@ -1,11 +1,23 @@
 import React from 'react';
+import Image from 'next/image';
 
 import { Badge } from '~/components/ui/badge';
 import { CalendarCustom } from '~/components/ui/calendar-custom';
+import { AspectRatio } from '~/components/ui/aspect-ratio';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '~/components/ui/dialog';
+
+import { KratujCover } from '~/assets';
+
+import { FaPlay } from 'react-icons/fa6';
 
 import type { DateRange } from 'react-day-picker';
-
-import { AspectRatio } from '~/components/ui/aspect-ratio';
 
 const Hero = () => {
   const range: DateRange = {
@@ -13,7 +25,10 @@ const Hero = () => {
     to: new Date('2024-03-17'),
   };
   return (
-    <section className='hero-gradient mx-auto max-w-screen-xl' id='hero'>
+    <section
+      className='hero-gradient mx-auto h-screen max-w-screen-xl'
+      id='hero'
+    >
       <div className='relative py-[8dvh]'>
         <div className='hero-gradient absolute top-0'> </div>
         <div className='my-12 flex flex-col items-center justify-center gap-2 py-12'>
@@ -48,8 +63,36 @@ const Hero = () => {
           <div className='absolute top-24 w-full max-w-screen-lg p-3 sm:top-16'>
             <div className='flex flex-col items-center gap-4 rounded-lg border border-zinc-900 p-4 backdrop-blur-lg lg:flex-row'>
               <div className='w-full max-w-2xl'>
-                <AspectRatio ratio={16 / 9}>
-                  <div className='h-full border'></div>
+                <AspectRatio ratio={16 / 9} className='relative'>
+                  <Image
+                    src={KratujCover.src}
+                    alt='Kratuj Cover'
+                    width={672}
+                    height={300}
+                    className='object cover rounded-xl opacity-40'
+                  />
+                  <div className='absolute top-0 flex h-full w-full flex-row items-center justify-center'>
+                    <Dialog>
+                      <DialogTrigger>
+                        <div className='group flex h-24 w-24 cursor-pointer items-center justify-center rounded-full bg-slate-600/40 backdrop-blur-lg transition-all duration-300 ease-out hover:h-28 hover:w-28'>
+                          <div className='flex h-20 w-20 items-center justify-center rounded-full border border-[#262135] bg-gradient-to-b from-[#141026] to-[#2B293A] backdrop-blur-lg transition-all duration-300 ease-out group-hover:h-[5.5rem] group-hover:w-[5.5rem]'>
+                            <FaPlay className='text-xl text-neutral-200' />
+                          </div>
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className='dark w-full max-w-2xl border-none bg-primary p-1'>
+                        <AspectRatio ratio={16 / 9} className='relative'>
+                          <iframe
+                            src='https://www.youtube.com/embed/oILbvIRsfpM?si=Vc2T2hN_LL3SWXwI&amp;controls=0'
+                            title='YouTube video player'
+                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                            allowFullScreen
+                            className='h-full w-full rounded-lg'
+                          ></iframe>
+                        </AspectRatio>
+                      </DialogContent>
+                    </Dialog>
+                  </div>
                 </AspectRatio>
               </div>
 
