@@ -22,7 +22,7 @@ const Hero = () => {
               From Mar 15th to Mar 17th, 2024
             </Badge>
           </div>
-          <h1 className='gradient-title font-grotesque z-[10] py-1 text-center text-5xl sm:text-7xl 2xl:text-7xl'>
+          <h1 className='gradient-title z-[10] py-1 text-center font-grotesque text-5xl sm:text-7xl 2xl:text-7xl'>
             Transforming Tomorrow
           </h1>
           <p className='z-[10] text-lg text-neutral-300'>
@@ -30,8 +30,8 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className='relative z-[1] mx-4 flex h-full w-full items-center justify-center'>
-          <div className='absolute -top-[18rem] mx-auto flex min-h-max max-w-screen-2xl items-center justify-center'>
+        <div className='relative z-[1] flex h-full w-full items-center justify-center'>
+          <div className='absolute -top-[18rem] mx-auto flex min-h-max max-w-screen-2xl items-center justify-center pt-8 sm:pt-0'>
             <video
               controls={false}
               autoPlay
@@ -42,6 +42,7 @@ const Hero = () => {
               className='w-full min-w-[1000px]'
             >
               <source src='/blackhole.webm' type='video/webm' />
+              <source src='/blackhole.mp4' type='video/mp4' />
               Your browser does not support the video tag.
             </video>
           </div>
