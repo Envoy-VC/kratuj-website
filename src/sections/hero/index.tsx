@@ -13,7 +13,7 @@ const Hero = () => {
     to: new Date('2024-03-17'),
   };
   return (
-    <section className='hero-gradient max-w-screen-xl] mx-auto' id='hero'>
+    <section className='hero-gradient mx-auto max-w-screen-xl' id='hero'>
       <div className='relative py-[8dvh]'>
         <div className='hero-gradient absolute top-0'> </div>
         <div className='my-12 flex flex-col items-center justify-center gap-2 py-12'>
@@ -31,22 +31,21 @@ const Hero = () => {
         </div>
 
         <div className='relative z-[1] flex h-full w-full items-center justify-center'>
-          <div className='absolute -top-[18rem] mx-auto flex min-h-max max-w-screen-2xl items-center justify-center pt-8 sm:pt-0'>
+          <div className='absolute left-0 top-0 flex w-full -translate-y-[18rem] items-center justify-center overflow-x-hidden pt-8 sm:pt-0'>
             <video
               controls={false}
               autoPlay
               muted
               playsInline
               loop
-              width={1200}
-              className='w-full min-w-[1000px]'
+              className='w-full min-w-[1280px]'
             >
               <source src='/blackhole.webm' type='video/webm' />
               <source src='/blackhole.mp4' type='video/mp4' />
               Your browser does not support the video tag.
             </video>
           </div>
-          <div className='absolute top-[9rem] w-full max-w-screen-lg -translate-x-4 p-3'>
+          <div className='absolute top-24 w-full max-w-screen-lg p-3 sm:top-16'>
             <div className='flex flex-col items-center gap-4 rounded-lg border border-zinc-900 p-4 backdrop-blur-lg lg:flex-row'>
               <div className='w-full max-w-2xl'>
                 <AspectRatio ratio={16 / 9}>

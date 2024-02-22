@@ -3,7 +3,7 @@ import { Hero } from '~/sections';
 
 const Home = () => {
   return (
-    <div className='dark h-[300dvh]'>
+    <div className='dark'>
       <Hero />
     </div>
   );
