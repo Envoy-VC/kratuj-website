@@ -3,7 +3,7 @@ import { cn } from '~/lib/utils';
 import localFont from 'next/font/local';
 
 import { GeistSans } from 'geist/font/sans';
-export const dune = localFont({
+const dune = localFont({
   src: '../../public/Dune_Rise.ttf',
   variable: '--font-dune',
 });
