@@ -1,10 +1,11 @@
 import '~/styles/globals.css';
+import { cn } from '~/lib/utils';
+import localFont from 'next/font/local';
 
-import { Inter } from 'next/font/google';
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
+import { GeistSans } from 'geist/font/sans';
+export const dune = localFont({
+  src: '../../public/Dune_Rise.ttf',
+  variable: '--font-dune',
 });
 
 export const metadata = {
@@ -20,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`font-sans ${inter.variable}`}>{children}</body>
+      <body className={cn('', GeistSans.className, dune.variable)}>
+        {children}
+      </body>
     </html>
   );
 }
