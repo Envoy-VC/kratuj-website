@@ -152,3 +152,8 @@
   filter: sepia(90%) saturate(150%) hue-rotate(220deg) brightness(70%)
     contrast(105%) opacity(70%);
 }
+
+.wormhole-filter {
+  filter: brightness(88%) saturate(111%) sepia(0%) contrast(102%)
+    hue-rotate(1deg);
+}
