@@ -11,7 +11,7 @@ const Navbar = () => {
           <div className='font-dune text-xl font-extrabold sm:text-2xl'>
             Kratuj
           </div>
-          <div className='border-border hidden flex-row items-center gap-6 rounded-3xl border px-4 py-2 lg:flex'>
+          <div className='hidden flex-row items-center gap-6 rounded-3xl border border-border px-4 py-2 lg:flex'>
             {navItems.map((item) => (
               <Link
                 href={item.href}

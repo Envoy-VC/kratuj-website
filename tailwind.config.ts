@@ -25,6 +25,7 @@ const config = {
       },
       fontFamily: {
         dune: ['var(--font-dune)'],
+        grotesque: ['var(--font-grotesque)'],
       },
       keyframes: {
         'accordion-down': {

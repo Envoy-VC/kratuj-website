@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow-x: hidden;
+}
+::selection {
+  background: rgba(147, 130, 255, 0.5);
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
 .gradient-border {
   background: rgb(2, 0, 20);
   background: -moz-linear-gradient(
@@ -40,4 +49,104 @@
     rgba(148, 101, 255, 0.08) 0%,
     rgba(3, 0, 20, 0) 100%
   );
+}
+
+.hero-top {
+  background-image: url(../assets/hero-background-top.png);
+}
+
+.hero-top-mask {
+  mask-image: url(../assets/hero-background-top-mask.png);
+  transition: 1s cubic-bezier(0.6, 0.6, 0, 1) opacity;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  position: absolute;
+}
+
+.gradient-title {
+  background: linear-gradient(
+    180deg,
+    #fff 22.5%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-top-animation {
+  animation: topAnimation 6s infinite cubic-bezier(0.62, 0.62, 0.28, 0.67);
+  background: linear-gradient(
+    180deg,
+    rgba(183, 164, 251, 0) 0,
+    #b7a4fb 100%,
+    #8562ff 100%,
+    rgba(133, 98, 255, 0) 0%
+  );
+  height: 200px;
+}
+
+@keyframes topAnimation {
+  0% {
+    transform: translateY(-202px);
+  }
+  33%,
+  100% {
+    transform: translateY(202px);
+  }
+}
+
+.gradient-badge {
+  isolation: isolate;
+  overflow: hidden;
+  align-items: center;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 32px;
+  box-shadow: inset 0 -7px 11px #a48fff1f;
+  display: flex;
+  margin: 0 auto 16px;
+  padding: 4px 13px 4px 8px;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+}
+
+.gradient-badge:after {
+  background: linear-gradient(
+    90.01deg,
+    rgba(229, 156, 255, 0.24) 0.01%,
+    rgba(186, 156, 255, 0.24) 50.01%,
+    rgba(156, 178, 255, 0.24) 100%
+  );
+  border-radius: inherit;
+  content: '';
+  inset: 0;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.gradient-badge-text {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
+  background-blend-mode: normal, screen;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
