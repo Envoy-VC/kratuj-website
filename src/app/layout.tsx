@@ -27,10 +27,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className='!dark'>
       <body
         className={cn(
-          '!dark bg-background text-white',
+          'bg-background text-white',
           GeistSans.className,
           dune.variable,
           grotesque.variable

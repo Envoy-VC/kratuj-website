@@ -3,7 +3,7 @@ import { Hero } from '~/sections';
 
 const Home = () => {
   return (
-    <div>
+    <div className='dark h-[300dvh]'>
       <Hero />
     </div>
   );

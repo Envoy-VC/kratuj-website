@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <div className='fixed top-0 h-[8dvh] w-full'>
+    <div className='z-[100] fixed top-0 h-[8dvh] w-full'>
       <div className='flex h-full flex-col bg-[rgba(3,0,20,.08)] backdrop-blur-md'>
         <div className='mx-auto flex h-full w-full max-w-screen-xl flex-row items-center justify-between px-3'>
           <div className='font-dune text-xl font-extrabold sm:text-2xl'>
