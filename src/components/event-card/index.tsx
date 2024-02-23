@@ -2,8 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { AnimatePresence, motion } from 'framer-motion';
+
+import { AspectRatio } from '../ui/aspect-ratio';
 
 import { cn } from '~/lib/utils';
 
@@ -23,7 +26,7 @@ export const EventList = ({
   return (
     <div
       className={cn(
-        'grid grid-cols-1 py-10  md:grid-cols-2  lg:grid-cols-3',
+        'grid grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-3',
         className
       )}
     >
@@ -38,7 +41,7 @@ export const EventList = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className='absolute inset-0 block h-full w-full rounded-3xl bg-neutral-200  dark:bg-[#32095B]'
+                className='card-gradient absolute inset-0 block h-full w-full rounded-3xl'
                 layoutId='hoverBackground'
                 initial={{ opacity: 0 }}
                 animate={{
@@ -54,7 +57,10 @@ export const EventList = ({
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <div className='relative'>
+              <CardImage />
+              <CardDescription>{item.description}</CardDescription>
+            </div>
           </Card>
         </Link>
       ))}
@@ -72,12 +78,12 @@ export const Card = ({
   return (
     <div
       className={cn(
-        'relative z-20 h-full w-full overflow-hidden rounded-2xl border border-transparent bg-black p-4 group-hover:border-slate-700 dark:border-white/[0.2]',
+        'relative z-20 h-full w-full overflow-hidden rounded-2xl border border-transparent bg-[#0e0c25] backdrop-blur-2xl',
         className
       )}
     >
       <div className='relative z-50'>
-        <div className='p-4'>{children}</div>
+        <div className='flex flex-col gap-1'>{children}</div>
       </div>
     </div>
   );
@@ -90,11 +96,35 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn('mt-4 font-bold tracking-wide text-zinc-100', className)}>
+    <h4
+      className={cn(
+        'p-3 text-lg font-bold tracking-wide text-zinc-100',
+        className
+      )}
+    >
       {children}
     </h4>
   );
 };
+
+export const CardImage = ({ className }: { className?: string }) => {
+  return (
+    <div className='w-full max-w-lg'>
+      <AspectRatio ratio={1.91} className='max-w-lg'>
+        <Image
+          src={
+            'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          }
+          alt='Kratuj Cover'
+          width={672}
+          height={300}
+          className={cn('rounded-b-xl object-cover opacity-40', className)}
+        />
+      </AspectRatio>
+    </div>
+  );
+};
+
 export const CardDescription = ({
   className,
   children,
@@ -105,7 +135,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        'mt-8 text-sm leading-relaxed tracking-wide text-zinc-400',
+        'absolute bottom-2 mx-3 mt-8 text-sm leading-relaxed tracking-wide text-zinc-200',
         className
       )}
     >

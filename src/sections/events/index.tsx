@@ -24,9 +24,9 @@ const Events = () => {
           </h2>
         </div>
       </div>
-      {/* <div className='mx-auto max-w-screen-2xl'>
+      <div className='mx-auto max-w-screen-2xl'>
         <EventList items={events} />
-      </div> */}
+      </div>
     </section>
   );
 };
@@ -36,37 +36,37 @@ export const events = [
     title: 'Event Name 1',
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
-    link: 'https://example.com',
+    link: '/',
   },
   {
     title: 'Event Name 2',
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. aliquet vul tellus vel vel met tellus.',
-    link: 'https://example.com',
+    link: '/',
   },
   {
     title: 'Event Name 3',
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. aliquet vul tellus vel vel',
-    link: 'https://example.com',
+    link: '/',
   },
   {
     title: 'Event Name 4',
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. vae adaabhd ajda jad',
-    link: 'https://example.com',
+    link: '/',
   },
   {
     title: 'Event Name 5',
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
-    link: 'https://example.com',
+    link: '/',
   },
   {
     title: 'Event Name 6 ',
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. vae adaabhd ajda jad ad jn jada nuuommefa',
-    link: 'https://example.com',
+    link: '/',
   },
 ];
 

@@ -84,6 +84,16 @@
   height: 200px;
 }
 
+.card-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(183, 164, 251, 0.5) 0,
+    #b7a4fb 100%,
+    #8562ff 100%,
+    rgba(133, 98, 255, 0.7) 0%
+  );
+}
+
 @keyframes topAnimation {
   0% {
     transform: translateY(-202px);
