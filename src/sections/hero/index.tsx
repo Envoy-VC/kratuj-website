@@ -18,10 +18,7 @@ const Hero = () => {
     to: new Date('2024-03-17'),
   };
   return (
-    <section
-      className='hero-gradient mx-auto min-h-[150vh] max-w-screen-xl lg:min-h-[100dvh]'
-      id='hero'
-    >
+    <section className='hero-gradient mx-auto max-w-screen-xl' id='hero'>
       <div className='relative py-[8dvh]'>
         <div className='hero-gradient absolute top-0'> </div>
         <div className='my-12 flex flex-col items-center justify-center gap-2 py-12'>
