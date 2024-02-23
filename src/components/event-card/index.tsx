@@ -1,10 +1,5 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-import { AnimatePresence, motion } from 'framer-motion';
 
 import { cn } from '~/lib/utils';
 
@@ -19,8 +14,6 @@ export const EventList = ({
   }[];
   className?: string;
 }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
     <div
       className={cn(
@@ -28,31 +21,12 @@ export const EventList = ({
         className
       )}
     >
-      {items.map((item, idx) => (
+      {items.map((item) => (
         <Link
           href={item?.link}
           key={item?.link}
           className='group relative h-full w-full p-3'
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}
         >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className='card-gradient absolute inset-0 block h-full w-full rounded-3xl'
-                layoutId='hoverBackground'
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
-            )}
-          </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
             <CardImage />
@@ -94,7 +68,7 @@ export const CardTitle = ({
   return (
     <h4
       className={cn(
-        'gradient-title absolute top-0 m-3 text-2xl font-bold tracking-wide transition-all duration-300 ease-out group-hover:text-3xl',
+        'gradient-title absolute top-0 m-3 text-2xl font-bold tracking-wide',
         className
       )}
     >
