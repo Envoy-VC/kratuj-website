@@ -4,7 +4,7 @@ import { EventList } from '~/components/event-card';
 
 const Events = () => {
   return (
-    <section id='events' className='overflow-hidden border pt-[10rem]'>
+    <section id='events' className='overflow-hidden pt-[10rem]'>
       <div className='relative mx-auto flex w-full items-center justify-center'>
         <video
           controls={false}
