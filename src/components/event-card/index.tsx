@@ -6,8 +6,6 @@ import Image from 'next/image';
 
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { AspectRatio } from '../ui/aspect-ratio';
-
 import { cn } from '~/lib/utils';
 
 export const EventList = ({
@@ -34,7 +32,7 @@ export const EventList = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className='group relative  block h-full w-full p-2'
+          className='group relative h-full w-full p-3'
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -57,10 +55,8 @@ export const EventList = ({
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
-            <div className='relative'>
-              <CardImage />
-              <CardDescription>{item.description}</CardDescription>
-            </div>
+            <CardImage />
+            <CardDescription>{item.description}</CardDescription>
           </Card>
         </Link>
       ))}
@@ -78,12 +74,12 @@ export const Card = ({
   return (
     <div
       className={cn(
-        'relative z-20 h-full w-full overflow-hidden rounded-2xl border border-transparent bg-[#0e0c25] backdrop-blur-2xl',
+        'group relative z-20 w-full overflow-hidden rounded-2xl border border-transparent bg-[#0e0c25] backdrop-blur-2xl',
         className
       )}
     >
       <div className='relative z-50'>
-        <div className='flex flex-col gap-1'>{children}</div>
+        <div className='space-y-1'>{children}</div>
       </div>
     </div>
   );
@@ -98,7 +94,7 @@ export const CardTitle = ({
   return (
     <h4
       className={cn(
-        'p-3 text-lg font-bold tracking-wide text-zinc-100',
+        'gradient-title absolute top-0 m-3 text-2xl font-bold tracking-wide transition-all duration-300 ease-out group-hover:text-3xl',
         className
       )}
     >
@@ -109,19 +105,18 @@ export const CardTitle = ({
 
 export const CardImage = ({ className }: { className?: string }) => {
   return (
-    <div className='w-full max-w-lg'>
-      <AspectRatio ratio={1.91} className='max-w-lg'>
-        <Image
-          src={
-            'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-          }
-          alt='Kratuj Cover'
-          width={672}
-          height={300}
-          className={cn('rounded-b-xl object-cover opacity-40', className)}
-        />
-      </AspectRatio>
-    </div>
+    <Image
+      src={
+        'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      }
+      alt='Kratuj Cover'
+      width={672}
+      height={300}
+      className={cn(
+        'rounded-xl object-cover opacity-40 transition-all duration-300 ease-out group-hover:scale-[115%]',
+        className
+      )}
+    />
   );
 };
 
