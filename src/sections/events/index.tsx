@@ -4,21 +4,21 @@ import { EventList } from '~/components/event-card';
 
 const Events = () => {
   return (
-    <section id='events' className='overflow-hidden pt-[10rem]'>
-      <div className='relative mx-auto flex w-full items-center justify-center'>
+    <section id='events' className='border'>
+      <div className='relative mx-auto flex w-full items-center justify-center overflow-hidden '>
         <video
           controls={false}
           autoPlay
           muted
           playsInline
           loop
-          className='wormhole-filter w-full min-w-[768px] -translate-y-32 sm:w-[1024px]'
+          className='wormhole-filter w-full min-w-[768px] -translate-y-1 sm:w-[1024px]'
         >
           <source src='/events-video.webm' type='video/webm' />
           <source src='/events-video.mp4' type='video/mp4' />
           Your browser does not support the video tag.
         </video>
-        <div className='absolute -top-1/3 flex h-full w-full flex-col items-end justify-end'>
+        <div className='absolute flex h-full w-full flex-col items-end justify-end'>
           <h2 className='gradient-title z-[10] w-full translate-y-5 pb-5 text-center font-grotesque text-4xl sm:text-5xl'>
             Dive into the Events
           </h2>
