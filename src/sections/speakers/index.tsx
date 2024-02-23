@@ -10,9 +10,9 @@ const Speakers = () => {
   return (
     <section
       id='speakers'
-      className='min-h-screen w-full space-y-8 py-20 sm:my-20 md:my-0'
+      className='min-h-screen w-full space-y-8 sm:my-20 md:my-0'
     >
-      <div className='relative mx-auto flex w-full items-center justify-center overflow-hidden'>
+      <div className='relative mx-auto my-10 flex w-full items-center justify-center overflow-hidden'>
         <Image
           src={RingImage.src}
           alt='Ring Image'
