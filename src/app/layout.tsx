@@ -13,8 +13,11 @@ const grotesque = localFont({
   variable: '--font-grotesque',
 });
 
+import { env } from '~/env';
+
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
+  metadataBase: new URL(env.NEXT_PUBLIC_METADATA_BASE_URL),
   title: 'Kratuj | Transforming Tomorrow',
   description: `Kratuj: NIT Agartala's premier annual tech conclave. North East India's largest event. Join us for innovation and inspiration!"`,
   applicationName: 'Kratuj',
@@ -40,13 +43,7 @@ export const metadata: Metadata = {
     title: 'Kratuj | Transforming Tomorrow',
     description: `Kratuj: NIT Agartala's premier annual tech conclave. North East India's largest event. Join us for innovation and inspiration!"`,
     creator: '@Envoy_1084',
-    images: [
-      {
-        url: `https://svofmwoukzjgqheplyds.supabase.co/storage/v1/object/public/club_details/og.png?t=2024-02-23T10%3A11%3A03.102Z`,
-        width: 1200,
-        height: 630,
-      },
-    ],
+    images: [`/og.png`],
   },
   openGraph: {
     title: 'Kratuj | Transforming Tomorrow',
@@ -56,7 +53,7 @@ export const metadata: Metadata = {
     url: 'https://kratuj.gymkhananita.com',
     images: [
       {
-        url: `https://svofmwoukzjgqheplyds.supabase.co/storage/v1/object/public/club_details/og.png?t=2024-02-23T10%3A11%3A03.102Z`,
+        url: `/og.png`,
         width: 1200,
         height: 630,
       },
