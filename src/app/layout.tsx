@@ -43,7 +43,16 @@ export const metadata: Metadata = {
     title: 'Kratuj | Transforming Tomorrow',
     description: `Kratuj: NIT Agartala's premier annual tech conclave. North East India's largest event. Join us for innovation and inspiration!"`,
     creator: '@Envoy_1084',
-    images: [`/og.png`],
+    site: '@Envoy_1084',
+    images: [
+      {
+        url: '/og.png',
+        alt: 'Kratuj OG Image',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+      },
+    ],
   },
   openGraph: {
     title: 'Kratuj | Transforming Tomorrow',
@@ -53,9 +62,11 @@ export const metadata: Metadata = {
     url: 'https://kratuj.gymkhananita.com',
     images: [
       {
-        url: `/og.png`,
+        url: '/og.png',
+        alt: 'Kratuj OG Image',
         width: 1200,
         height: 630,
+        type: 'image/png',
       },
     ],
   },

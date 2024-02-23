@@ -10,7 +10,7 @@ const Speakers = () => {
   return (
     <section
       id='speakers'
-      className='min-h-screen w-full space-y-8 pt-20 sm:pt-0'
+      className='min-h-[100dvh] w-full space-y-8 pt-20 sm:pt-0'
     >
       <div className='relative mx-auto my-20 flex w-full items-center justify-center overflow-hidden'>
         <Image
