@@ -53,8 +53,8 @@ const Hero = () => {
               Your browser does not support the video tag.
             </video>
           </div>
-          <div className='absolute top-24 block h-full w-full max-w-screen-lg border p-3 sm:top-16'>
-            <div className='flex min-h-full flex-col items-center gap-4 rounded-lg border border-red-500 p-4 backdrop-blur-lg lg:flex-row'>
+          <div className='  top-0 h-full w-full max-w-screen-lg translate-y-24 p-3 sm:translate-y-16'>
+            <div className='flex min-h-full flex-col items-center gap-4 rounded-lg border border-zinc-900 p-4 backdrop-blur-lg lg:flex-row'>
               <div className='w-full max-w-2xl'>
                 <AspectRatio ratio={16 / 9} className='relative'>
                   <Image
