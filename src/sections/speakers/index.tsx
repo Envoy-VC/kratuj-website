@@ -9,7 +9,7 @@ import { RingImage } from '~/assets';
 const Speakers = () => {
   return (
     <section id='speakers' className='w-full'>
-      <div className='flex w-full flex-col items-center justify-center overflow-x-hidden'>
+      <div className='flex w-full flex-col items-center justify-center overflow-hidden'>
         <div className='flex flex-col items-center justify-center'>
           <Image
             src={RingImage.src}
