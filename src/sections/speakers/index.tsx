@@ -8,11 +8,8 @@ import { RingImage } from '~/assets';
 
 const Speakers = () => {
   return (
-    <section
-      id='speakers'
-      className='w-full space-y-8 border pt-[16rem] sm:pt-[12rem] md:pt-0'
-    >
-      <div className='relative mx-auto my-20 flex w-full items-center justify-center overflow-hidden'>
+    <section id='speakers' className='w-full space-y-8'>
+      <div className='relative mx-auto flex w-full items-center justify-center overflow-hidden'>
         <Image
           src={RingImage.src}
           alt='Ring Image'

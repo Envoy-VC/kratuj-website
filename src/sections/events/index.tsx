@@ -4,7 +4,7 @@ import { EventList } from '~/components/event-card';
 
 const Events = () => {
   return (
-    <section id='events' className='overflow-hidden border pt-20'>
+    <section id='events' className='overflow-hidden pt-[10rem]'>
       <div className='relative mx-auto flex w-full items-center justify-center'>
         <video
           controls={false}
@@ -18,7 +18,7 @@ const Events = () => {
           <source src='/events-video.mp4' type='video/mp4' />
           Your browser does not support the video tag.
         </video>
-        <div className='absolute -top-32 flex h-full w-full flex-col items-end justify-end'>
+        <div className='absolute -top-1/3 flex h-full w-full flex-col items-end justify-end'>
           <h2 className='gradient-title z-[10] w-full translate-y-5 pb-5 text-center font-grotesque text-4xl sm:text-5xl'>
             Dive into the Events
           </h2>

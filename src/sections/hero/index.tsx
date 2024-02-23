@@ -19,7 +19,7 @@ const Hero = () => {
   };
   return (
     <section
-      className='hero-gradient mx-auto h-[100dvh] max-w-screen-xl border'
+      className='hero-gradient mx-auto h-[140dvh] max-w-screen-xl lg:h-[100dvh]'
       id='hero'
     >
       <div className='relative py-[8dvh]'>
