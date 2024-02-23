@@ -4,8 +4,8 @@ import { Hero, Speakers, Events } from '~/sections';
 const Home = () => {
   return (
     <div className='dark'>
-      {/* <Hero /> */}
-      <Speakers />
+      <Hero />
+      {/* <Speakers /> */}
       <Events />
     </div>
   );

@@ -39,7 +39,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   }, [selected]);
 
   return (
-    <div className='relative mx-auto grid h-[100dvh] w-full max-w-7xl grid-cols-1 gap-4 px-4 py-10 md:grid-cols-3 '>
+    <div className='relative mx-auto grid min-h-[100dvh] w-full max-w-7xl grid-cols-1 gap-4 border px-4 py-10 sm:min-h-[100dvh] md:grid-cols-3 '>
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, 'cursor-pointer')}>
           <motion.div
