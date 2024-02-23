@@ -5,7 +5,7 @@ import { EventList } from '~/components/event-card';
 const Events = () => {
   return (
     <section id='events' className=''>
-      <div className='relative mx-auto flex w-full items-center justify-center overflow-hidden '>
+      <div className='relative mx-auto flex w-full items-center justify-center overflow-x-hidden'>
         <video
           controls={false}
           autoPlay

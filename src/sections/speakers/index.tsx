@@ -8,27 +8,29 @@ import { RingImage } from '~/assets';
 
 const Speakers = () => {
   return (
-    <section id='speakers' className='w-full space-y-8'>
-      <div className='relative mx-auto flex w-full items-center justify-center overflow-hidden'>
-        <Image
-          src={RingImage.src}
-          alt='Ring Image'
-          width={650}
-          height={650}
-          className='min-w-[500px] sm:w-[768px] '
-        />
-        <div className='absolute top-0 flex h-full w-full flex-col items-end justify-end'>
-          <div className='gradient-badge z-[10]'>
-            <Badge variant='gradient' className='w-fit'>
-              Speakers
-            </Badge>
+    <section id='speakers' className='w-full'>
+      <div className='flex w-full flex-col items-center justify-center overflow-x-hidden'>
+        <div className='flex flex-col items-center justify-center'>
+          <Image
+            src={RingImage.src}
+            alt='Ring Image'
+            width={650}
+            height={650}
+            className='over min-w-[500px] sm:w-[768px]'
+          />
+          <div className='flex h-full w-full -translate-y-24 flex-col items-end justify-end sm:-translate-y-32'>
+            <div className='gradient-badge z-[10]'>
+              <Badge variant='gradient' className='w-fit'>
+                Speakers
+              </Badge>
+            </div>
+            <h2 className='gradient-title z-[10] w-full translate-y-5 pb-5 text-center font-grotesque text-4xl sm:text-5xl'>
+              Meet the Speakers
+            </h2>
           </div>
-          <h2 className='gradient-title z-[10] w-full translate-y-5 pb-5 text-center font-grotesque text-4xl sm:text-5xl'>
-            Meet the Speakers
-          </h2>
         </div>
+        <LayoutGrid cards={cards} />
       </div>
-      <LayoutGrid cards={cards} />
     </section>
   );
 };
