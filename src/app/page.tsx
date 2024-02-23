@@ -4,7 +4,7 @@ import { Hero, Speakers, Events } from '~/sections';
 const Home = () => {
   return (
     <div className='dark'>
-      <Hero />
+      {/* <Hero /> */}
       <Speakers />
       <Events />
     </div>
