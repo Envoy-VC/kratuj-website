@@ -2,10 +2,11 @@ import React from 'react';
 
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import HamburgerMenu from '../hamburger-menu';
 
 const Navbar = () => {
   return (
-    <div className='z-[100] fixed top-0 h-[8dvh] w-full'>
+    <div className='fixed top-0 z-[100] h-[8dvh] w-full'>
       <div className='flex h-full flex-col bg-[rgba(3,0,20,.08)] backdrop-blur-md'>
         <div className='mx-auto flex h-full w-full max-w-screen-xl flex-row items-center justify-between px-3'>
           <div className='font-dune text-xl font-extrabold sm:text-2xl'>
@@ -22,9 +23,13 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <Button variant='shimmer' className='h-8 px-5'>
-            Get Started
-          </Button>
+          <div className='flex flex-row items-center gap-2'>
+            <Button variant='shimmer' className='h-8 px-5'>
+              Get Started
+            </Button>
+
+            <HamburgerMenu />
+          </div>
         </div>
         <div className='gradient-border h-[1px] w-full' />
       </div>
