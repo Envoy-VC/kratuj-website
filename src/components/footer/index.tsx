@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 
 import HeaderWormhole from '../header-wormhole';
+import { LuBinary } from 'react-icons/lu';
 
 const Footer = () => {
   return (
@@ -18,10 +19,22 @@ const Footer = () => {
             <div className='w-full basis-1/2'>
               <div className='flex h-full flex-col items-center justify-between gap-4 md:items-start'>
                 <div className='gradient-title font-dune text-4xl'>kratuj</div>
-
-                <div className='text-center text-zinc-400'>
-                  Gymkhana Technical @{new Date().getFullYear()}. All rights
-                  reserved.
+                <div className='flex flex-col'>
+                  <div className='text-center text-zinc-400'>
+                    Gymkhana Technical @{new Date().getFullYear()}.{' '}
+                    <br className='block sm:hidden' />
+                    All rights reserved.
+                  </div>
+                  <div className=' hidden text-zinc-400 md:block'>
+                    Made with <LuBinary className='inline' /> by{' '}
+                    <Link
+                      href='https://envoy1084.xyz'
+                      target='_blank'
+                      className='text-zinc-200'
+                    >
+                      Envoy_
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -54,6 +67,16 @@ const Footer = () => {
                   </Link>
                 ))}
               </div>
+            </div>
+            <div className='block text-center text-zinc-400 md:hidden'>
+              Made with <LuBinary className='inline' /> by{' '}
+              <Link
+                href='https://envoy1084.xyz'
+                target='_blank'
+                className='text-zinc-200'
+              >
+                Envoy_
+              </Link>
             </div>
           </div>
         </div>
