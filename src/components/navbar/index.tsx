@@ -40,23 +40,23 @@ const Navbar = () => {
 export const navItems = [
   {
     name: 'About',
-    href: '/',
+    href: '#hero',
   },
   {
     name: 'Events',
-    href: '/',
+    href: '#events',
   },
   {
-    name: 'Schedule',
-    href: '/',
+    name: 'Speakers',
+    href: '#speakers',
   },
   {
     name: 'Register',
-    href: '/',
+    href: '#hero',
   },
   {
     name: 'Contact',
-    href: '/',
+    href: '#footer',
   },
 ];
 
