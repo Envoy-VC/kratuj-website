@@ -89,6 +89,7 @@ const Hero = () => {
               <CalendarCustom
                 mode='range'
                 numberOfMonths={1}
+                weekStartsOn={1}
                 defaultMonth={new Date('2024-03-17')}
                 selected={range}
                 className='w-fit rounded-md shadow-2xl'
